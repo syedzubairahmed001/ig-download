@@ -37,14 +37,13 @@ const createImg = (data) => {
 const enableDownload = (data) => {
   let a = document.createElement("a");
   a.href = data.content;
-  a.download = 'true';
-  a.target = '_blank';
+  a.download = "true";
+  a.target = "_blank";
   a.textContent = "Download";
   a.classList.add("download-btn");
 
   render.appendChild(a);
 };
-
 // extract html
 const getMedia = () => {
   render.innerHTML = "<div class='image-placeholder'></div>";
@@ -62,11 +61,13 @@ const getMedia = () => {
           if (v) {
             createVideo(v);
             enableDownload(v);
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
           } else {
             let img = _('meta[property="og:image"]');
             if (img) {
               createImg(img);
               enableDownload(img);
+              window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
             } else {
               alert("The entered url is invalid please recheck");
             }
