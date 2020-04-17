@@ -13,7 +13,7 @@ html {
 .header {
   /* background-image: url("../../assets/images/hero-bg.svg"); */
   background-image: linear-gradient(
-    to right,
+    to bottom right,
     #405de6,
     #5851db,
     #833ab4,
@@ -87,7 +87,7 @@ html {
 }
 .download-btn {
   background-image: linear-gradient(
-    to right,
+    to bottom right,
     #405de6,
     #5851db,
     #833ab4,
